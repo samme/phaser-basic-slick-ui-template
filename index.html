@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    html, body, #gameContainer { height: 100%; }
+    body{ background: #111; color: #eee; margin: 0; padding: 0; overflow: hidden; }
+    </style>
+    <title>Phaser Basic SlickUI Project Template</title>
+</head>
+<body>
+
+<div id="gameContainer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.2/phaser.js"></script>
+<script src="bower_components/slick-ui/dist/slick-ui.min.js"></script>
+<script src="Boot.js"></script>
+<script src="Preloader.js"></script>
+<script src="MainMenu.js"></script>
+<script src="Game.js"></script>
+<script>
+
+// Create your Phaser game and inject it into the gameContainer div.
+// Slick UI requires a global `game` variable
+var game = new Phaser.Game({
+    width:  720,
+    height: 564,
+    parent: 'gameContainer',
+    scaleMode: Phaser.ScaleManager.SHOW_ALL
+});
+
+var slickUI; // will be assigned in BasicGame.Preloader::preload()
+
+// Add the States your game has.
+// You don't have to do this in the html, it could be done in your Boot state too.
+game.state.add('Boot', BasicGame.Boot);
+game.state.add('Preloader', BasicGame.Preloader);
+game.state.add('MainMenu', BasicGame.MainMenu);
+game.state.add('Game', BasicGame.Game);
+
+//  Now start the Boot state.
+game.state.start('Boot');
+
+</script>
+
+</body>
+</html>
