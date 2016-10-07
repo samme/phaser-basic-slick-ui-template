@@ -1,5 +1,5 @@
 
-BasicGame.Game = function (game) {};
+BasicGame.Game = function () {};
 
 BasicGame.Game.prototype = {
 
@@ -44,7 +44,7 @@ BasicGame.Game.prototype = {
 
     },
 
-    quitGame: function (pointer) {
+    quitGame: function () {
 
         // Then let's go back to the main menu.
         this.state.start('MainMenu');

@@ -1,5 +1,5 @@
 
-BasicGame.MainMenu = function (game) {};
+BasicGame.MainMenu = function () {};
 
 BasicGame.MainMenu.prototype = {
 
@@ -33,7 +33,7 @@ BasicGame.MainMenu.prototype = {
 
     },
 
-    startGame: function (pointer) {
+    startGame: function () {
 
         // Stop the music? (otherwise it'll carry on playing)
         // this.game.music.stop();
