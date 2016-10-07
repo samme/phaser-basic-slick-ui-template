@@ -1,0 +1,24 @@
+{
+    "globals": {
+        "BasicGame": true,
+        "CocoonJS": false,
+        "game": true,
+        "p2": false,
+        "Phaser": false,
+        "PIXI": false,
+        "process": false,
+        "SlickUI": false,
+        "slickUI": true
+    },
+    "browser": true,
+    "devel": true,
+    "indent": 4,
+    "newcap": true,
+    "noempty": true,
+    "nonew": true,
+    "plusplus": false,
+    "quotmark": false,
+    "trailing": true,
+    "undef": true,
+    "unused": true
+}
