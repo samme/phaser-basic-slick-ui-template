@@ -5,6 +5,8 @@ BasicGame.Game.prototype = {
 
     create: function () {
 
+        this.world.add(slickUI.container.displayGroup);
+
         this.sky = this.add.sprite(0, 0, 'sky');
         this.sky.scale.set(this.world.width / this.sky.texture.width);
 
@@ -15,6 +17,11 @@ BasicGame.Game.prototype = {
         this.dragon.play('flyright');
 
         this.physics.arcade.enable(this.dragon);
+
+        var button;
+        slickUI.add(button = new SlickUI.Element.Button(10, 10, 140, 80));
+        button.events.onInputUp.add(this.quitGame, this);
+        button.add(new SlickUI.Element.Text(0, 0, 'Quit')).center();
 
     },
 
@@ -41,6 +48,8 @@ BasicGame.Game.prototype = {
         // Here you should destroy anything you no longer need.
         // Stop music, delete sprites, purge caches, free resources, all that good stuff.
         this.game.music.stop();
+
+        slickUI.container.displayGroup.removeAll(true);
 
     },
 

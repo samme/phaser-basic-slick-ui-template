@@ -33,6 +33,12 @@ BasicGame.MainMenu.prototype = {
 
     },
 
+    shutdown: function () {
+
+        slickUI.container.displayGroup.removeAll(true);
+
+    },
+
     startGame: function () {
 
         // Stop the music? (otherwise it'll carry on playing)
