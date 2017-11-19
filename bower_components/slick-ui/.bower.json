@@ -20,15 +20,14 @@
   "ignore": [
     "node_modules"
   ],
-  "version": "0.4.0",
-  "_release": "0.4.0",
+  "version": "0.4.4",
+  "_release": "0.4.4",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.0",
-    "commit": "6b78e9df92336e0f3a93444f4b2ebc7590834846"
+    "tag": "0.4.4",
+    "commit": "44af5c595d84ec7a8bbcc82f2727e15cf9dfbc13"
   },
   "_source": "https://github.com/Flaxis/slick-ui.git",
   "_target": "^0.4.0",
-  "_originalSource": "slick-ui",
-  "_direct": true
+  "_originalSource": "slick-ui"
 }
